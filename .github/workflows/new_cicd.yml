@@ -38,6 +38,7 @@ jobs:
     env:
       AWS_REGION: us-east-1 # Your AWS region
       ECR_REPOSITORY: practice_nov_flask
+      IMAGE_TAG: latest
       
 
     steps:
