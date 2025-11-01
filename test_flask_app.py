@@ -11,4 +11,4 @@ def test_page_1(client):
 def test_page_2(client):
     response=client.get('/new_page')
     assert response.status_code==200
-    assert response.data==b'I am in a new page'
+    assert response.data==b'This is in a different new page'
