@@ -57,7 +57,7 @@ jobs:
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REGISTRY: 187641964656.dkr.ecr.us-east-1.amazonaws.com/practice_nov_flask:latest
         ECR_REPOSITORY: practice_nov_flask
         IMAGE_TAG: ${{ github.sha }}
       run: |
