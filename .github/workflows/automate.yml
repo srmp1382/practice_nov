@@ -10,7 +10,6 @@ on:
       - main
       - master
 jobs:
-  job 1:
   build:
     runs-on: ubuntu-latest
     strategy:
