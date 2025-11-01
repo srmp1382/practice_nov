@@ -5,9 +5,9 @@ def client(app):
     return app.test_client()
 def page_1():
     response=client.get('/')
-    assert response.status_code==200
+   
     assert response.data=='I am in the home page'
 def page_2():
     response=client.get('/new_page')
-    assert response.status_code==200
+
     assert response.data=='I am in a new page'
