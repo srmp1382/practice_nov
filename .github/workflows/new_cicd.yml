@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.12"]
     steps:
       - uses: actions/checkout@v5
       - name: Set up Python ${{ matrix.python-version }}
@@ -38,9 +38,8 @@ jobs:
     env:
       AWS_REGION: us-east-1 # Your AWS region
       ECR_REPOSITORY: practice_nov_flask
-      IMAGE_TAG: latest
-      ECS_CLUSTER: temp_nov_cluster
-      ECS_SERVICE: task_nov-service-24h2zbf4
+      
+
     steps:
 
     - uses: actions/checkout@v5
@@ -70,16 +69,16 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: task_nov-revision2.json
+        task-definition: task_nov_temp.json
         container-name: practice_nov_flask
-        image: ${{ steps.build-image.outputs.image }}
+        image: practice_nov_flask
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v2
       with:
-        task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: task_nov-service-24h2zbf4
-        cluster: temp_nov_cluster
+        task-definition: task_nov_temp
+        service: task_nov_temp-service-ufq1yrbt
+        cluster: temp_cluster_nov
         wait-for-service-stability: true
 
 

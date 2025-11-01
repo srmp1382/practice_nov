@@ -10,11 +10,11 @@
             "environment": [],
             "environmentFiles": [],
             "essential": true,
-            "image": "869935065581.dkr.ecr.us-east-1.amazonaws.com/practice_nov_flask:latest",
+            "image": "187641964656.dkr.ecr.us-east-1.amazonaws.com/practice_nov_flask:latest",
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/task_nov",
+                    "awslogs-group": "/ecs/task_nov_temp",
                     "awslogs-create-group": "true",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
@@ -39,13 +39,13 @@
     ],
     "cpu": "1024",
     "enableFaultInjection": false,
-    "executionRoleArn": "arn:aws:iam::869935065581:role/ecsTaskExecutionRole",
-    "family": "task_nov",
+    "executionRoleArn": "arn:aws:iam::187641964656:role/ecsTaskExecutionRole",
+    "family": "task_nov_temp",
     "memory": "3072",
     "networkMode": "awsvpc",
     "placementConstraints": [],
-    "registeredAt": "2025-11-01T11:43:57.423Z",
-    "registeredBy": "arn:aws:iam::869935065581:user/devops_user_3279092_85537",
+    "registeredAt": "2025-11-01T13:39:19.315Z",
+    "registeredBy": "arn:aws:iam::187641964656:user/devops_user_3279092_85589",
     "requiresAttributes": [
         {
             "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
@@ -75,13 +75,13 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "revision": 2,
+    "revision": 1,
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
     "status": "ACTIVE",
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:869935065581:task-definition/task_nov:2",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:187641964656:task-definition/task_nov_temp:1",
     "volumes": [],
     "tags": []
 }
