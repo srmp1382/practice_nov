@@ -60,7 +60,7 @@ jobs:
       env:
         ECR_REGISTRY: 187641964656.dkr.ecr.us-east-1.amazonaws.com/practice_nov_flask:latest
         ECR_REPOSITORY: practice_nov_flask
-        IMAGE_TAG: ${{ github.sha }}
+        IMAGE_TAG: latest
       run: |
         docker build -t $ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REPOSITORY:$IMAGE_TAG
