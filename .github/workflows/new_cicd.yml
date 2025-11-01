@@ -4,7 +4,7 @@ env:
   ECR_REPOSITORY: practice_nov_flask           # set this to your Amazon ECR repository name
   ECS_SERVICE: task_nov_temp-service                 # set this to your Amazon ECS service name
   ECS_CLUSTER: temp_cluster_nov_practice                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: C:\Users\NSB Academy\Documents\practice_nov\task_nov_temp.json # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: task_nov_temp-revision1.json # set this to the path to your Amazon ECS task definition
                                                  # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: practice_nov_flask            # set this to the name of the container in the
                                                 # containerDefinitions section of your task definition
